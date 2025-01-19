@@ -3,8 +3,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 from pymongo import MongoClient
 from datetime import datetime
 
-# Replace YOUR_URL with your mongodb url
-cluster = MongoClient("mongodb+srv://binsealter:Binsealter@binsewhatsapp.cyoqz.mongodb.net/",tls=True, tlsAllowInvalidCertificates=True)
+cluster = MongoClient("mongodb+srv://binsealter:Binsealter@binsewhatsapp.cyoqz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 db = cluster["binsetest"]
 users = db["users"]
 orders = db["orders"]
